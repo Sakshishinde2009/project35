@@ -58,10 +58,10 @@ function setup() {
   //bunny sprite
   blink.frameDelay = 20;
   eat.frameDelay = 20;
-  bunny = createSprite(270,100,100,100);
+  bunny = createSprite(270,80,100,100);
   bunny.addImage(rabbit);
   bunny.scale = 0.2;
-  higherground =new Ground(300,170,100,10);
+  higherground =new Ground(300,180,100,10);
 
   bunny.addAnimation('blinking',blink);
   bunny.addAnimation('eating',eat);
@@ -83,7 +83,7 @@ function setup() {
   button2.size(50,50);
 
  // write a correct block of code to add button to cut the rope 
-   button2.drop(rope2);
+   button2.mouseClicked(drop);
    
   ellipseMode(RADIUS);
 }
@@ -113,7 +113,7 @@ function draw()
     World.remove(engine.world,fruit);
     fruit = null;
    //Code to change the animation of a bunny when a collision with fruit and bunny is detected. 
-    changeAnimation("eating",eat);
+    bunny.changeAnimation('eating');
   }
   
   if(collide(fruit,bubble,40) == true)
