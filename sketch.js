@@ -58,7 +58,7 @@ function setup() {
   //bunny sprite
   blink.frameDelay = 20;
   eat.frameDelay = 20;
-  bunny = createSprite(270,80,100,100);
+  bunny = createSprite(270,170,100,100);
   bunny.addImage(rabbit);
   bunny.scale = 0.2;
   higherground =new Ground(300,180,100,10);
