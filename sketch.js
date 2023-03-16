@@ -58,10 +58,10 @@ function setup() {
   //bunny sprite
   blink.frameDelay = 20;
   eat.frameDelay = 20;
-  bunny = createSprite(270,170,100,100);
+  bunny = createSprite(270,120,100,100);
   bunny.addImage(rabbit);
   bunny.scale = 0.2;
-  higherground =new Ground(300,180,100,10);
+  higherground =new Ground(300,190,100,10);
 
   bunny.addAnimation('blinking',blink);
   bunny.addAnimation('eating',eat);
